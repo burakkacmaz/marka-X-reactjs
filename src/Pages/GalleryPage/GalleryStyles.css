@@ -1,0 +1,86 @@
+.gallery {
+  text-align: center;
+  padding: 5rem;
+  padding-top: 2rem;
+}
+
+.gallery h1 {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  font-size: 3rem;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 0;
+  padding-top: 100%; /* Kare boyutu için */
+  position: relative;
+}
+
+.image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Resmi kapsamak için */
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(100% / 3 - 10px), 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% / 2 - 10px), 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% - 20px), 1fr));
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.modal img {
+  max-width: 90vw; /* Ekran genişliğinin %90'ı kadar olacak */
+  max-height: 90vh; /* Ekran yüksekliğinin %90'ı kadar olacak */
+  object-fit: contain; /* Resmi taşmadan sığdır */
+}

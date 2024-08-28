@@ -1,0 +1,156 @@
+.menu-info {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* margin-top: 101px; */
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 84vh;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.background-image.active {
+  opacity: 1;
+}
+
+.menu-yazi-container {
+  position: absolute;
+  top: 50%;
+  bottom: 10%;
+  right: 0;
+  text-align: center;
+  width: 50%;
+  max-width: 400px;
+  height: 59%;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.menu-yazi {
+  background-color: rgba(34, 34, 34, 0.7);
+  padding: 10px 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.menu-yazi h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0;
+}
+.menu-yazi p {
+  font-size: 1.2rem;
+  padding: 0.5rem 0 2rem 0;
+  margin: 0;
+}
+.menu-yazi a {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #222;
+  background-color: #ffffffaa;
+  padding: 0.5rem 2rem;
+  border-radius: 6px;
+}
+
+.logoyazi1 {
+  background: linear-gradient(to right top, white 70%, red 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+.logoyazi2 {
+  background: linear-gradient(to right top, red 20%, black 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+.logoyazi3 {
+  background: linear-gradient(to right top, black 0%, black 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.menu-yazi h1 span {
+  padding: 0 1px;
+}
+
+.urunler-button:hover {
+  background-color: #fff;
+  color: #222;
+  transition: all 0.4s ease;
+}
+
+/* ! ÜRÜNLER */
+.urun-container {
+  top: 100%;
+  margin-top: calc(84vh + 2rem);
+  width: 100%;
+  text-align: center;
+}
+
+.urun-container::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background-color: black;
+}
+
+.urun-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.urun {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 80%;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  border: solid 2px #222;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.urun-img {
+  width: 40%;
+  height: auto;
+  margin: 20px;
+}
+
+.urun-bilgi {
+  flex: 1;
+}
+
+.urun-bilgi h2,
+.urun-bilgi p {
+  margin: 0;
+}
+
+.urun-bilgi h2 {
+  margin-bottom: 10px;
+}
+
+.urun-bilgi h2 span {
+  text-decoration: underline;
+  text-decoration-color: red;
+}
